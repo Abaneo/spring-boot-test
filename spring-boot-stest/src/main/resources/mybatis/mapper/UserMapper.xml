@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pers.yf.spring_boot_stest.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="pers.yf.spring_boot_stest.entity.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+  </resultMap>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, name,age
+    from sys_user
+  </select>
+</mapper>
